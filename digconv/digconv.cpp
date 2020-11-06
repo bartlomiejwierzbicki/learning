@@ -26,17 +26,17 @@ void bintodec(string a)
     int x = 0;
     for (int i = 0; i <= a.size() - 1; i++)
     {
-        x += ((int)a[i] - 48) * pow(2, (a.size() - 1) - i);
+        x += (static_cast<unsigned __int64>(a[i]) - 48) * pow(2, (a.size() - 1) - i);
     }
     cout << x << endl;
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     if (argc <= 1)
     {
         cout << "-b <number> (binary to decimal)" << endl
-             << "-d <number> (decimal to binary)" << endl;
+            << "-d <number> (decimal to binary)" << endl;
     }
 
     else if (argc == 3)
@@ -54,6 +54,6 @@ int main(int argc, char *argv[])
     else
     {
         cout << "-b <number> (binary to decimal)" << endl
-             << "-d <number> (decimal to binary)" << endl;
+            << "-d <number> (decimal to binary)" << endl;
     }
 }
